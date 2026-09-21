@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2V2高C - 策略博弈与团队配合全攻略</title>
+    <meta name="description" content="2V2高C攻略网提供2V2高C核心技巧、阵容搭配、实战录像分析与意识训练指南，助你掌握高分局制胜关键。">
+    <meta name="keywords" content="2V2高C, 团队配合, 策略博弈, 实战技巧, 阵容搭配">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-subscribe {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-subscribe:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* 核心概念区 */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+        }
+
+        /* 核心技巧网格 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 阵容搭配区 */
+        .comp-container {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .comp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .comp-item {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comp-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .comp-role {
+            min-width: 100px;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .comp-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comp-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background-color: #f1f5f9;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
+
+        /* 常见误区 */
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .mistake-card {
+            background-color: #fef2f2;
+            border: 1px solid #fee2e2;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .mistake-card h4 {
+            color: #991b1b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mistake-card p {
+            color: #7f1d1d;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .comp-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .mistakes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-inner">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            2V2高C
+        </a>
+        <nav class="nav-links">
+            <a href="#core">核心技巧</a>
+            <a href="#comps">阵容搭配</a>
+            <a href="#mistakes">常见误区</a>
+            <a href="#faq">常见问题</a>
+        </nav>
+        <a href="#" class="btn-subscribe">加入社区</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>掌握 2V2 高 C 的艺术</h1>
+            <p>在激烈的2v2博弈中，如何通过精准的切入、完美的配合与高爆发输出掌控全场节奏？本站为你深度解析高C位的核心思维与实战策略。</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>85%</strong>
+                    <span>胜率提升</span>
+                </div>
+                <div class="stat-item">
+                    <strong>3.2s</strong>
+                    <span>平均决策时间</span>
+                </div>
+                <div class="stat-item">
+                    <strong>100+</strong>
+                    <span>实战案例库</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技巧 -->
+    <section id="core" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">高 C 核心技巧</h2>
+                <p class="section-desc">成为高 C 不仅仅是数值高，更是对时机、位置和资源的极致把控。</p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>时机判断与后手切入</h3>
+                    <p>高 C 的精髓在于“等”。不要盲目先手，观察敌方关键技能冷却（CD），在敌方交出控制或位移后进行收割。</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3>侧翼绕后与分割战场</h3>
+                    <p>2V2 对战中，正面硬拼往往两败俱伤。利用侧翼绕后，迫使敌方双人阵型分散，创造单点突破或集火秒杀的机会。</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">🛡️</div>
+                    <h3>保护与输出平衡</h3>
+                    <p>不要为了输出而无脑突进。在保护己方核心队友的同时，寻找敌方后排的破绽，形成“1+1 > 2”的战术效果。</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>伤害计算与秒杀线</h3>
+                    <p>在开团前，心中要有一道伤害公式。预判敌方血量，确保在技能真空期或无敌帧外，能瞬间完成击杀。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阵容搭配 -->
+    <section id="comps" class="section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">强力阵容搭配</h2>
+                <p class="section-desc">根据不同的版本环境，选择最契合的高 C 组合。</p>
+            </div>
+
+            <div class="comp-container">
+                <div class="comp-list">
+                    <div class="comp-item">
+                        <div class="comp-role">爆发流</div>
+                        <div class="comp-content">
+                            <h4>瞬秒流：高频技能 + 爆发增益</h4>
+                            <p>选择拥有多段伤害或瞬间爆发能力的角色。核心思路是利用高频技能叠加增益，在3秒内打出巨额伤害。</p>
+                            <div class="comp-tags">
+                                <span class="tag">高爆发</span>
+                                <span class="tag">瞬间击杀</span>
+                                <span class="tag">容错率低</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comp-item">
+                        <div class="comp-role">控制流</div>
+                        <div class="comp-content">
+                            <h4>压制流：强控 + 持续输出</h4>
+                            <p>通过长时间的硬控（如眩晕、冰冻）限制敌方走位，让高 C 角色在安全距离外进行持续风筝输出。</p>
+                            <div class="comp-tags">
+                                <span class="tag">强控</span>
+                                <span class="tag">风筝流</span>
+                                <span class="tag">稳健</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comp-item">
+                        <div class="comp-role">功能流</div>
+                        <div class="comp-content">
+                            <h4>消耗流：远程消耗 + 机动性</h4>
+                            <p>利用射程优势进行拉扯，通过消耗敌方血量寻找残血收割机会，适合走位灵活的玩家。</p>
+                            <div class="comp-tags">
+                                <span class="tag">拉扯</span>
+                                <span class="tag">消耗</span>
+                                <span class="tag">灵活性</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见误区 -->
+    <section id="mistakes" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">新手常见误区</h2>
+                <p class="section-desc">避免这些致命错误，能让你少走弯路，快速提升段位。</p>
+            </div>
+
+            <div class="mistakes-grid">
+                <div class="mistake-card">
+                    <h4>⚠️ 盲目先手</h4>
+                    <p>在不知道敌方技能位置时贸然开团，往往会被反打，导致己方瞬间崩盘。</p>
+                </div>
+                <div class="mistake-card">
+                    <h4>⚠️ 忽视视野</h4>
+                    <p>2V2 极度依赖地图视野，不看小地图、不插眼就盲目压线，容易被蹲草阴死。</p>
+                </div>
+                <div class="mistake-card">
+                    <h4>⚠️ 技能空放</h4>
+                    <p>为了凑技能而乱丢，不仅浪费了宝贵的冷却时间，还暴露了自己的位置。</p>
+                </div>
+                <div class="mistake-card">
+                    <h4>⚠️ 团队脱节</h4>
+                    <p>一个人冲得太快，另一个人跟不上，导致被敌方逐个击破。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题解答</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 2V2 中高 C 角色应该出什么装备？</div>
+                <div class="faq-answer">
+                    A: 通常优先选择增加穿透、攻击速度或冷却缩减的装备。具体需根据敌方阵容调整，如果对方护甲高，优先破甲；如果对方回复能力强，优先做重伤装备。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 遇到对面双前排阵容怎么办？</div>
+                <div class="faq-answer">
+                    A: 这种情况下硬拼很难赢。建议先利用远程技能消耗，寻找对方控制技能交出的瞬间，再集火秒杀其中一名前排，或者选择撤退发育，等待后期装备成型。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 如何提高自己的意识？</div>
+                <div class="faq-answer">
+                    A: 多看小地图，预判敌方打野位置。每波团战前思考“如果我是对面会怎么打”。复盘自己的录像，分析失误原因。
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>关于 2V2高C</h5>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    我们致力于为玩家提供最硬核、最实用的2V2策略攻略。从基础教学到高端局思维，助你成为团队中的绝对核心。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h5>快速导航</h5>
+                <ul>
+                    <li><a href="#core">核心技巧</a></li>
+                    <li><a href="#comps">阵容搭配</a></li>
+                    <li><a href="#mistakes">常见误区</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>资源下载</h5>
+                <ul>
+                    <li><a href="#">技能连招视频</a></li>
+                    <li><a href="#">出装计算器</a></li>
+                    <li><a href="#">对局数据分析</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 2V2高C 攻略网. 保留所有权利. 本站内容仅供学习参考.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 交互逻辑
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', event => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>

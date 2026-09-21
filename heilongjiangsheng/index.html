@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黑龙江省农垦总局官方网站，提供黑龙江省农垦总局概况、管理职能、农业现代化建设、北大荒集团发展动态、政策法规及政务服务信息。">
+    <meta name="keywords" content="黑龙江省农垦总局,北大荒集团,黑龙江农垦,农业现代化,垦区管理">
+    <title>黑龙江省农垦总局-黑龙江垦区农业现代化建设与政务服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --primary-light: #4a7c43;
+            --accent-color: #d4a017;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部工具条 */
+        .top-bar {
+            background-color: #f0f2f5;
+            font-size: 13px;
+            color: var(--text-light);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 35px;
+        }
+
+        .top-links a {
+            margin-left: 15px;
+            color: var(--text-light);
+        }
+
+        .top-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 头部 */
+        header {
+            background-color: var(--bg-white);
+            height: var(--header-height);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* 导航 */
+        nav {
+            background-color: var(--primary-color);
+        }
+
+        .nav-list {
+            display: flex;
+            height: 50px;
+        }
+
+        .nav-list li {
+            position: relative;
+        }
+
+        .nav-list a {
+            display: block;
+            color: white;
+            padding: 0 25px;
+            height: 100%;
+            line-height: 50px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-list a:hover, .nav-list a.active {
+            background-color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0, 50, 0, 0.7), rgba(0, 50, 0, 0.5)), url('https://picsum.photos/seed/agriculture_farm/1600/600.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #b8860b;
+        }
+
+        /* 通知公告 */
+        .notice-bar {
+            background: white;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .notice-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .notice-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background-color: var(--accent-color);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .notice-list {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .notice-list li {
+            margin-right: 25px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .notice-list li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主要内容区 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+
+        /* 左侧栏目 */
+        .section-title {
+            font-size: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .section-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* 政务公开列表 */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .news-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .news-body {
+            padding: 15px;
+        }
+
+        .news-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .news-title:hover {
+            color: var(--primary-color);
+        }
+
+        .news-meta {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* 中间栏目 */
+        .center-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list li a {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 10px;
+        }
+
+        .info-list li .date {
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* 右侧栏目 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .quick-link-item {
+            text-align: center;
+            padding: 15px 10px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .quick-link-item:hover {
+            background-color: #e9ecef;
+            color: var(--primary-color);
+        }
+
+        /* 数据统计 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none; /* 简化处理，移动端隐藏导航 */
+            }
+            .top-bar-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 5px 0;
+            }
+            .top-links {
+                margin-top: 5px;
+            }
+            .top-links a {
+                margin: 0 10px;
+            }
+            .hero {
+                height: 300px;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部工具栏 -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="time-info" id="current-date">正在加载时间...</div>
+            <div class="top-links">
+                <a href="#">设为首页</a>
+                <a href="#">加入收藏</a>
+                <a href="#">领导之窗</a>
+                <a href="#">信息公开</a>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部区域 -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">垦</div>
+                <div class="logo-text">
+                    黑龙江省农垦总局
+                    <span>黑龙江垦区</span>
+                </div>
+            </a>
+            <!-- 移动端菜单按钮（视觉占位） -->
+            <div style="display: none;" class="mobile-menu-btn">
+                <span style="font-size: 24px;">☰</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">集团概况</a></li>
+                <li><a href="#">垦区概况</a></li>
+                <li><a href="#">政务公开</a></li>
+                <li><a href="#">产业发展</a></li>
+                <li><a href="#">科技创新</a></li>
+                <li><a href="#">社会事业</a></li>
+                <li><a href="#">专题专栏</a></li>
+                <li><a href="#">互动交流</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>建设现代化大农业 推进农业强省建设</h1>
+            <p>黑龙江省农垦总局是黑龙江省人民政府直属特大型国有企业，肩负着保障国家粮食安全、发展现代农业的重要使命。</p>
+            <a href="#" class="hero-btn">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 通知公告条 -->
+    <div class="container">
+        <div class="notice-bar">
+            <div class="notice-title">通知公告</div>
+            <ul class="notice-list">
+                <li><a href="#">黑龙江省农垦总局关于做好2024年秋粮收购工作的通知</a></li>
+                <li><a href="#">关于开展垦区生态环境保护专项行动的公告</a></li>
+                <li><a href="#">北大荒集团2024年上半年经济运行分析报告</a></li>
+                <li><a href="#">关于进一步加强农垦系统安全生产管理的通知</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="container main-content">
+        <!-- 左侧：新闻资讯 -->
+        <section class="left-column">
+            <div class="section-title">
+                <span>最新动态</span>
+                <a href="#" class="section-more">查看更多 &gt;</a>
+            </div>
+            
+            <div class="news-grid">
+                <!-- 新闻卡片 1 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/tractor/400/300" alt="农业机械" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">北大荒集团：加快推进农业机械化与智能化转型</a></h3>
+                        <div class="news-meta">2024-05-20 | 农业现代化</div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 2 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/wheat/400/300" alt="丰收景象" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">黑龙江垦区夏粮丰收在望，预计产量再创新高</a></h3>
+                        <div class="news-meta">2024-05-18 | 产业发展</div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 3 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/soil/400/300" alt="土壤改良" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">垦区推进黑土地保护性耕作技术，筑牢粮食生产根基</a></h3>
+                        <div class="news-meta">2024-05-15 | 生态环保</div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 4 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/meeting/400/300" alt="工作会议" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">黑龙江省农垦总局召开2024年农业工作会议</a></h3>
+                        <div class="news-meta">2024-05-12 | 集团要闻</div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 5 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/tech/400/300" alt="农业科技" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">引进国际先进农业技术，提升垦区科技含量</a></h3>
+                        <div class="news-meta">2024-05-10 | 科技创新</div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 6 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/safety/400/300" alt="安全生产" class="news-img">
+                    <div class="news-body">
+                        <h3 class="news-title"><a href="#">强化农垦企业安全生产责任体系，确保安全生产形势稳定</a></h3>
+                        <div class="news-meta">2024-05-08 | 安全管理</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 中间：政策法规与机构 -->
+        <section class="center-column">
+            <div class="section-title">
+                <span>政策法规</span>
+                <a href="#" class="section-more">更多 &gt;</a>
+            </div>
+            <div class="info-card">
+                <ul class="info-list">
+                    <li><a href="#">黑龙江省农垦总局关于印发《黑龙江垦区农业绿色发展实施方案》的通知</a><span class="date">2024-05-10</span></li>
+                    <li><a href="#">关于规范农垦土地流转管理的指导意见</a><span class="date">2024-05-08</span></li>
+                    <li><a href="#">农垦系统事业单位人员编制管理办法</a><span class="date">2024-05-05</span></li>
+                    <li><a href="#">关于进一步加强垦区国有企业资产管理的通知</a><span class="date">2024-05-01</span></li>
+                    <li><a href="#">黑龙江农垦垦区基本农田保护条例实施细则</a><span class="date">2024-04-28</span></li>
+                </ul>
+            </div>
+
+            <div class="section-title" style="margin-top: 30px;">
+                <span>机构职能</span>
+            </div>
+            <div class="info-card">
+                <ul class="info-list">
+                    <li><a href="#">黑龙江省农垦总局办公厅</a></li>
+                    <li><a href="#">黑龙江省农垦总局发展规划处</a></li>
+                    <li><a href="#">黑龙江省农垦总局财务资产处</a></li>
+                    <li><a href="#">黑龙江省农垦总局农业发展部</a></li>
+                    <li><a href="#">黑龙江省农垦总局社会事业管理局</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 右侧：侧边栏 -->
+        <aside class="sidebar">
+            <!-- 快速链接 -->
+            <div class="sidebar-card">
+                <div class="section-title" style="font-size: 18px;">快速导航</div>
+                <div class="quick-links">
+                    <a href="#" class="quick-link-item">集团官网</a>
+                    <a href="#" class="quick-link-item">政务服务平台</a>
+                    <a href="#" class="quick-link-item">农垦信息网</a>
+                    <a href="#" class="quick-link-item">北大荒党建</a>
+                </div>
+            </div>
+
+            <!-- 数据统计 -->
+            <div class="sidebar-card">
+                <div class="section-title" style="font-size: 18px;">垦区数据</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-num">42</div>
+                        <div class="stat-label">农垦总局</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">2000</div>
+                        <div class="stat-label">万亩耕地</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">100+</div>
+                        <div class="stat-label">现代化农场</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 专题活动 -->
+            <div class="sidebar-card">
+                <div class="section-title" style="font-size: 18px;">专题活动</div>
+                <ul class="info-list">
+                    <li><a href="#">北大荒精神学习</a></li>
+                    <li><a href="#">农业现代化示范区建设</a></li>
+                    <li><a href="#">扫黑除恶专项斗争</a></li>
+                    <li><a href="#">文明城市创建</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-logo">
+                    <h2>黑龙江省农垦总局</h2>
+                    <p class="footer-desc">黑龙江省农垦总局是黑龙江省人民政府直属特大型国有企业，肩负着保障国家粮食安全、发展现代农业的重要使命。致力于建设现代化大农业，打造世界一流农业企业。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>网站导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">集团概况</a></li>
+                        <li><a href="#">政务公开</a></li>
+                        <li><a href="#">发展规划</a></li>
+                        <li><a href="#">产业布局</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>服务指南</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">办事大厅</a></li>
+                        <li><a href="#">政策咨询</a></li>
+                        <li><a href="#">投诉建议</a></li>
+                        <li><a href="#">人才招聘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul class="footer-links">
+                        <li>地址：黑龙江省哈尔滨市南岗区汉水路390号</li>
+                        <li>邮编：150001</li>
+                        <li>电话：0451-82365888</li>
+                        <li>邮箱：service@hljkeda.gov.cn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 黑龙江省农垦总局 版权所有 | 未经授权禁止转载</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 设置当前日期
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.getElementById('current-date');
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+            dateElement.textContent = now.toLocaleDateString('zh-CN', options);
+        });
+    </script>
+</body>
+              </html>

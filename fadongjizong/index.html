@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="发动机总成专业选购指南，涵盖汽车发动机型号查询、维修保养知识、总成拆解评测及供应商信息。提供全面的技术参数解析与行业资讯。">
+    <meta name="keywords" content="发动机总成,汽车发动机,发动机型号,发动机维修,发动机总成供应商">
+    <title>发动机总成-专业汽车动力总成选购与维修指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004494;
+            --accent-color: #e63946;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .header-cta {
+            display: block;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .header-cta:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #d62828;
+            border-color: #d62828;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+
+        /* Features Grid */
+        .features {
+            background-color: var(--bg-white);
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .feature-item:hover {
+            background-color: var(--bg-light);
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-top: 2px;
+        }
+
+        .feature-text h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Content Sections */
+        .info-section {
+            background-color: var(--bg-white);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-card {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-card:last-child {
+            border-bottom: none;
+        }
+
+        .article-thumb {
+            width: 200px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background-color: #eee;
+        }
+
+        .article-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .article-info h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-meta {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .sidebar {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+            font-size: 14px;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .category-list span {
+            background-color: #eef2f7;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Specs Table */
+        .specs-section {
+            background-color: var(--bg-white);
+        }
+
+        .specs-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-main);
+            width: 25%;
+        }
+
+        td {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        tr:hover td {
+            background-color: #fcfcfc;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-white);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .nav-menu {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-card {
+                flex-direction: column;
+            }
+
+            .article-thumb {
+                width: 100%;
+                height: 180px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+                <span>动力源</span>发动机
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">技术百科</a></li>
+                    <li><a href="#">供应商名录</a></li>
+                    <li><a href="#">维修保养</a></li>
+                    <li><a href="#">行业资讯</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="header-cta">联系供应商</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>发动机总成：汽车动力的核心心脏</h1>
+                    <p>深入解析发动机总成结构、型号匹配、维修拆解及市场选购指南。为您提供专业的汽车动力系统解决方案。</p>
+                    <div class="hero-buttons">
+                        <a href="#specs" class="btn btn-primary">查看技术规格</a>
+                        <a href="#guide" class="btn btn-outline">选购指南</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for engine image -->
+                    <img src="https://picsum.photos/seed/engine/600/400" alt="发动机总成示意图" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <div class="container">
+            <div class="features">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚙️</div>
+                        <div class="feature-text">
+                            <h3>原厂总成</h3>
+                            <p>提供各大品牌原厂发动机总成，品质保障，适配精准。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔧</div>
+                        <div class="feature-text">
+                            <h3>专业维修</h3>
+                            <p>经验丰富的技师团队，提供发动机大修、缸体修复服务。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">
+                            <h3>数据查询</h3>
+                            <p>支持发动机型号、编码及匹配数据查询，避免选型错误。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h3>质保服务</h3>
+                            <p>提供长期质保承诺，售后无忧，保障维修/更换安全。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <section class="section info-section" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">发动机总成选购与维护指南</h2>
+                    <p class="section-desc">了解发动机总成的构成、如何判断其状态以及选购时的注意事项</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="article-list">
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/engine1/300/200" alt="发动机结构">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-meta">技术百科 • 2023-10-24</div>
+                                <h3><a href="#">发动机总成包含哪些主要部件？</a></h3>
+                                <p class="article-excerpt">发动机总成不仅仅是气缸盖和气缸体，还包括曲柄连杆机构、配气机构、冷却系统、润滑系统和燃油供给系统等核心部件的完整组合。</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/engine2/300/200" alt="发动机型号">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-meta">选型指南 • 2023-10-22</div>
+                                <h3><a href="#">如何通过VIN码查询发动机总成型号</a></h3>
+                                <p class="article-excerpt">车辆识别代号（VIN）中包含了发动机型号信息。本文详细介绍如何从17位VIN码中提取关键数据，确保更换的发动机总成与原车完全匹配。</p>
+                            </div>
+                        </article>
+
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/engine3/300/200" alt="发动机维修">
+                            </div>
+                            <div class="article-info">
+                                <div class="article-meta">维修保养 • 2023-10-18</div>
+                                <h3><a href="#">更换发动机总成后的磨合期注意事项</a></h3>
+                                <p class="article-excerpt">更换全新的发动机总成后，必须进行规范的磨合。本文列出磨合期的转速限制、负载控制及日常保养要点，延长发动机使用寿命。</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <aside class="sidebar">
+                        <h3 class="sidebar-title">热门分类</h3>
+                        <ul class="category-list">
+                            <li><a href="#">汽油发动机总成 <span>120</span></a></li>
+                            <li><a href="#">柴油发动机总成 <span>85</span></a></li>
+                            <li><a href="#">涡轮增压总成 <span>64</span></a></li>
+                            <li><a href="#">V6/V8 发动机 <span>45</span></a></li>
+                            <li><a href="#">混合动力系统 <span>32</span></a></li>
+                            <li><a href="#">进口发动机 <span>28</span></a></li>
+                        </ul>
+
+                        <h3 class="sidebar-title" style="margin-top: 30px;">热门文章</h3>
+                        <ul class="category-list">
+                            <li><a href="#">二手发动机翻新流程</a></li>
+                            <li><a href="#">发动机烧机油原因分析</a></li>
+                            <li><a href="#">正时链条与皮带更换</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Table Section -->
+        <section class="section specs-section" id="specs">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见发动机技术参数对比</h2>
+                    <p class="section-desc">不同排量与类型的发动机总成核心数据参考</p>
+                </div>
+                <div class="specs-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>型号/系列</th>
+                                <th>排量</th>
+                                <th>最大功率</th>
+                                <th>最大扭矩</th>
+                                <th>适用车型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EA888 Gen4</td>
+                                <td>2.0T / 2.5T</td>
+                                <td>185kW / 220kW</td>
+                                <td>370N·m / 420N·m</td>
+                                <td>大众/奥迪系</td>
+                            </tr>
+                            <tr>
+                                <td>2JZ-GTE</td>
+                                <td>3.0L</td>
+                                <td>276kW</td>
+                                <td>465N·m</td>
+                                <td>丰田Supra/Mark IV</td>
+                            </tr>
+                            <tr>
+                                <td>K20A2</td>
+                                <td>2.0L</td>
+                                <td>147kW</td>
+                                <td>187N·m</td>
+                                <td>本田思域Type-R</td>
+                            </tr>
+                            <tr>
+                                <td>BN49 1.5T</td>
+                                <td>1.5L</td>
+                                <td>118kW</td>
+                                <td>220N·m</td>
+                                <td>吉利/领克系</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">发动机总成和发动机本体有什么区别？</div>
+                        <div class="faq-answer">
+                            发动机本体通常指单独的气缸体或气缸盖，而“发动机总成”是指将气缸体、气缸盖、曲轴、凸轮轴、配气机构、燃油供给系统、冷却系统等所有核心部件完整组装在一起的成套部件，直接更换即可使用。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">更换二手发动机总成需要注意什么？</div>
+                        <div class="faq-answer">
+                            首先要确认发动机的里程数和维修记录，检查是否有重大事故痕迹（如缸体变形）。其次，必须确保发动机的ECU、正时链条/皮带及附件（发电机、起动机）与原车匹配。建议在更换后进行全面的电脑匹配和路试。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何判断发动机总成是否需要更换？</div>
+                        <div class="faq-answer">
+                            当出现严重的烧机油现象、缸压严重不足、发动机严重敲缸或连杆断裂导致无法修复时，通常建议更换发动机总成。如果只是局部小修，则不必更换总成。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">更换发动机总成后年检能过吗？</div>
+                        <div class="faq-answer">
+                            更换发动机总成后，需要去车管所办理发动机变更登记手续，并更换新的行驶证。手续齐全且排放达标的情况下，年检是可以通过的。建议咨询当地检测站的具体要求。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于动力源</h4>
+                    <p style="font-size: 14px; line-height: 1.6; color: #999;">
+                        我们致力于提供最专业的汽车发动机总成信息与服务，连接优质供应商与维修技师，为汽车动力系统提供全方位解决方案。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">技术百科</a></li>
+                        <li><a href="#">供应商名录</a></li>
+                        <li><a href="#">维修案例</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">质保政策</a></li>
+                        <li><a href="#">物流配送</a></li>
+                        <li><a href="#">安装指导</a></li>
+                        <li><a href="#">售后反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-links">
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@powerengine.com</li>
+                        <li>地址：中国·某市汽车产业园A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 动力源发动机服务中心 版权所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>

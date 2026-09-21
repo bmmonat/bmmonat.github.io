@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>符文恒金棒 - 顶级锻造材料与装备制作指南</title>
+    <meta name="description" content="符文恒金棒是高级锻造材料，用于制作史诗级装备。本站提供符文恒金棒的材料来源、制作配方、使用场景及新手制作指南。">
+    <meta name="keywords" content="符文恒金棒, 高级锻造, 装备制作, 材料指南, 游戏攻略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #1a1d24;
+            --bg-hover: #252932;
+            --primary-gold: #ffd700;
+            --primary-gold-dim: #b8860b;
+            --text-main: #e0e6ed;
+            --text-muted: #949aa3;
+            --accent-cyan: #00d2ff;
+            --border-color: #2d3342;
+            --font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dim) 100%);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 17, 21, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            background: radial-gradient(circle at top right, rgba(255, 215, 0, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(0, 210, 255, 0.05), transparent 40%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #b8860b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .item-card::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-gold), transparent, var(--accent-cyan));
+            z-index: -1;
+            border-radius: 14px;
+            opacity: 0.3;
+        }
+
+        .item-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(180deg, #2a2f3a 0%, #1a1d24 100%);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-image-placeholder::after {
+            content: '★ 符文恒金棒 ★';
+            font-size: 2rem;
+            color: rgba(255, 215, 0, 0.2);
+            font-weight: bold;
+            letter-spacing: 5px;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .item-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-gold-dim);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Crafting Guide */
+        .guide {
+            padding: 80px 0;
+            background-color: #15181e;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .recipe-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .recipe-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .recipe-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .recipe-icon {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .recipe-name {
+            font-weight: 600;
+        }
+
+        .recipe-cost {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cost-highlight {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        .sidebar-box {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .sidebar-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-hover);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            padding-top: 15px;
+            border-top-color: var(--border-color);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-gold);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b0c0f;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <span>ForgeMaster</span> 符文恒金棒
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro" class="active">材料介绍</a></li>
+                <li><a href="#crafting">制作配方</a></li>
+                <li><a href="#uses">用途场景</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero" id="intro">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>符文恒金棒</h1>
+                <p>传说级锻造材料。由恒金与符文精华融合而成，是打造顶阶护甲与神兵利器的唯一核心材料。掌握它的制作与用途，是成为锻造大师的关键一步。</p>
+                <a href="#crafting" class="btn btn-primary">查看制作指南</a>
+            </div>
+            <div class="hero-visual">
+                <div class="item-card">
+                    <div class="item-image-placeholder"></div>
+                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--primary-gold);">符文恒金棒</h3>
+                    <div class="item-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">稀有度</div>
+                            <div class="stat-value">史诗</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">耐久度</div>
+                            <div class="stat-value">无限</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">硬度</div>
+                            <div class="stat-value">极高</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">特殊效果</div>
+                            <div class="stat-value">符文共鸣</div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+                        棒身流淌着微弱的金光，仿佛蕴含着某种古老的能量，触碰时能感受到轻微的震颤。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <span>核心特性</span>
+            </div>
+            <div class="section-subtitle">为什么它是所有高级工匠梦寐以求的材料？</div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>符文共鸣</h3>
+                    <p>符文恒金棒自带微弱符文能量，在锻造过程中能显著提升装备的附魔成功率，使成品装备自带初始属性加成。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>极致耐久</h3>
+                    <p>采用恒金合金锻造，物理与魔法抗性极高。用它制成的护甲在遭受重击时，能减少高达 30% 的耐久度损耗。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>万能兼容</h3>
+                    <p>无论是锻造重型铠甲还是精密法器，符文恒金棒都能完美适配，不会像普通金属那样产生化学反应或杂质。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crafting Guide Section -->
+    <section class="guide" id="crafting">
+        <div class="container">
+            <div class="section-title">
+                <span>制作与获取</span>
+            </div>
+            <div class="guide-layout">
+                <div class="guide-main">
+                    <div class="section-subtitle">获取符文恒金棒的材料需求与配方</div>
+                    
+                    <div class="recipe-list">
+                        <div class="recipe-item">
+                            <div class="recipe-info">
+                                <div class="recipe-icon">🔥</div>
+                                <div>
+                                    <div class="recipe-name">精炼恒金锭</div>
+                                    <div class="recipe-cost">由 10 个恒金矿 在高炉中提炼</div>
+                                </div>
+                            </div>
+                            <div class="recipe-cost">需求：熟练度 Lv.50</div>
+                        </div>
+
+                        <div class="recipe-item">
+                            <div class="recipe-info">
+                                <div class="recipe-icon">✨</div>
+                                <div>
+                                    <div class="recipe-name">虚空符文结晶</div>
+                                    <div class="recipe-cost">击败虚空裂隙中的精英怪物掉落</div>
+                                </div>
+                            </div>
+                            <div class="recipe-cost">需求：熟练度 Lv.65</div>
+                        </div>
+
+                        <div class="recipe-item">
+                            <div class="recipe-info">
+                                <div class="recipe-icon">🔨</div>
+                                <div>
+                                    <div class="recipe-name">符文锻造锤</div>
+                                    <div class="recipe-cost">仅限大师级工匠使用</div>
+                                </div>
+                            </div>
+                            <div class="recipe-cost">需求：大师级锻造台</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="sidebar-box">
+                        <h3>新手制作检查清单</h3>
+                        <ul class="checklist">
+                            <li>确保拥有大师级锻造台</li>
+                            <li>准备好足够的燃料（精炼煤炭）</li>
+                            <li>提升锻造熟练度至 65 级以上</li>
+                            <li>准备 2-3 个虚空符文结晶备用</li>
+                            <li>建议在夜间进行，成功率更高</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box">
+                        <h3>材料替代方案</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">
+                            如果无法获取虚空符文结晶，可以使用 5 个暗影水晶代替，但成品装备的附魔上限会降低 1 级。
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uses Section -->
+    <section class="features" id="uses">
+        <div class="container">
+            <div class="section-title">
+                <span>主要用途</span>
+            </div>
+            <div class="section-subtitle">符文恒金棒能制作哪些顶级装备？</div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <h3>⚔️ 战士套装</h3>
+                    <p>用于制作“符文守护者”铠甲。提供极高的物理防御，并在受到致命一击时触发“格挡护盾”，持续 5 秒。</p>
+                </article>
+                <article class="feature-card">
+                    <h3>🔮 法师法杖</h3>
+                    <p>用于制作“奥术编织者”法杖。施法速度提升 15%，且法术暴击率有额外加成。</p>
+                </article>
+                <article class="feature-card">
+                    <h3>🗡️ 刺客匕首</h3>
+                    <p>用于制作“暗影行者”双刃。增加 20% 的移动速度和隐身持续时间，适合潜行流玩法。</p>
+                </article>
+                <article class="feature-card">
+                    <h3>🛡️ 盾牌</h3>
+                    <p>用于制作“圣光壁垒”盾牌。不仅提供高额格挡值，还能为周围队友提供持续的光环效果。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <span>常见问题解答</span>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">符文恒金棒可以重复使用吗？</div>
+                <div class="faq-answer">
+                    不可以。符文恒金棒在锻造过程中会消耗殆尽，无法像普通工具那样重复使用。每次锻造都需要消耗一根符文恒金棒。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">在哪里可以买到符文恒金棒？</div>
+                <div class="faq-answer">
+                    虽然可以通过制作获得，但在高级拍卖行中偶尔也能直接买到。不过价格通常较高，且需要消耗大量金币。建议优先学习制作配方。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">制作失败会有什么后果？</div>
+                <div class="faq-answer">
+                    使用符文恒金棒制作装备失败的概率极低（低于 5%）。如果失败，符文恒金棒会破碎，材料完全消失，且不会返还制作费用。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">恒金棒和符文恒金棒有什么区别？</div>
+                <div class="faq-answer">
+                    普通恒金棒只能制作绿装（优秀级），而符文恒金棒是制作紫装（史诗级）和橙装（传说级）的门槛材料，两者不能混用。
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ForgeMaster</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    专注于游戏装备制作与材料攻略的专业指南网站。助您打造最强装备，征服冒险世界。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#intro">材料介绍</a></li>
+                    <li><a href="#crafting">制作配方</a></li>
+                    <li><a href="#uses">装备图鉴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">锻造技能树</a></li>
+                    <li><a href="#">材料价格走势</a></li>
+                    <li><a href="#">公会锻造室</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 符文恒金棒攻略网. All Rights Reserved. 本站内容仅供参考，游戏名称及设定归原作者所有。
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
